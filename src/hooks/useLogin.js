@@ -18,7 +18,7 @@ const useLogin = () => {
       );
       dispatch(adduser(res?.data?.user));
       toast.success(res?.data?.message, { position: "top-right" });
-      setTimeout(() => navigate("/feed"), 2000);
+      setTimeout(() => navigate("/app/feed"), 2000);
     } catch (err) {
       toast.error(err?.message, { position: "top-right" });
       console.error("Login failed:", err.response || err.message);

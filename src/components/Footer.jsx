@@ -2,9 +2,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 const Footer = () => {
-  const user = useSelector((state) => state.user);
+  // const user = useSelector((state) => state.user);
 
-  if (!user) return null;
+  // if (!user) return null;
 
   return (
     <div className="bg-gray-100">

@@ -8,9 +8,9 @@ import NavButtons from "./NavButtons";
 const Navbar = () => {
   const user = useSelector((state) => state.user);
 
-  if (!user) {
-    return null;
-  }
+  // if (!user) {
+  //   return null;
+  // }
 
   return (
     <div className="navbar bg-base-100 shadow-sm">

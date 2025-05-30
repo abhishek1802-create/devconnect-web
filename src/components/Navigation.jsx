@@ -8,16 +8,16 @@ import { useDispatch } from "react-redux";
 import { removeuser } from "../slices/userSlice";
 
 const navItems = [
-  { type: "link", to: "/profile", icon: <CgProfile />, label: "Profile" },
+  { type: "link", to: "/app/profile", icon: <CgProfile />, label: "Profile" },
   {
     type: "link",
-    to: "/connections",
+    to: "/app/connections",
     icon: <TbCloudDataConnection />,
     label: "Connections",
   },
   {
     type: "link",
-    to: "/requests",
+    to: "/app/requests",
     icon: <LuGitPullRequestArrow />,
     label: "Requests",
   },

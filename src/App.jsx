@@ -13,24 +13,22 @@ import PrivateRoute from "./components/PrivateRoute.jsx";
 
 function App() {
   return (
-    <>
-      <Provider store={appStore}>
-        <BrowserRouter basename="/">
-          <Routes>
-            <Route path="/" element={<Body />}>
-              <Route path="/" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route element={<PrivateRoute />}>
-                <Route path="/feed" element={<Feed />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/requests" element={<Requests />} />
-                <Route path="/connections" element={<Connections />} />
-              </Route>
+    <Provider store={appStore}>
+      <BrowserRouter basename="/">
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/app" element={<Body />}>
+            <Route element={<PrivateRoute />}>
+              <Route path="feed" element={<Feed />} />
+              <Route path="profile" element={<Profile />} />
+              <Route path="requests" element={<Requests />} />
+              <Route path="connections" element={<Connections />} />
             </Route>
-          </Routes>
-        </BrowserRouter>
-      </Provider>
-    </>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
