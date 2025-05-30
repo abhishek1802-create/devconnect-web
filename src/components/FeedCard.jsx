@@ -1,30 +1,24 @@
-import React from "react";
-
 const FeedCard = ({ user }) => {
   const { firstName, lastName, about } = user;
+
   return (
-    <div className="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl w-[280px]">
+    <div className="flex flex-col bg-white border border-gray-200 shadow-md rounded-xl w-full max-w-[300px] mx-auto transition-transform hover:scale-[1.02]">
       <img
-        className="w-full h-auto rounded-t-xl"
+        className="w-full h-48 object-cover rounded-t-xl"
         src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
-        alt="Card Image"
+        alt="Card"
       />
-      <div className="p-4 md:p-5">
+      <div className="p-4">
         <h3 className="text-lg font-bold text-gray-800">
-          {firstName + " " + lastName}
+          {firstName} {lastName}
         </h3>
-        <p className="mt-1 text-gray-500">{about}</p>
-        <div className="flex justify-around items-center gap-2">
-          <button
-            className="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
-            href="#"
-          >
+        <p className="mt-1 text-gray-600 text-sm">{about}</p>
+
+        <div className="flex justify-between mt-4 gap-2">
+          <button className="flex-1 py-2 px-3 text-sm font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors">
             Interested
           </button>
-          <button
-            className="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-pink-600 text-white hover:bg-pink-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
-            href="#"
-          >
+          <button className="flex-1 py-2 px-3 text-sm font-medium rounded-lg bg-pink-600 text-white hover:bg-pink-700 transition-colors">
             Ignore
           </button>
         </div>

@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { adduser } from "../slices/userSlice";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../utils/constants";
 
 const useLogin = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const useLogin = () => {
   const getLogin = async (email, password) => {
     try {
       const res = await axios.post(
-        "http://localhost:7777/login",
+        BASE_URL + "/login",
         { email, password },
         { withCredentials: true }
       );
@@ -19,7 +20,7 @@ const useLogin = () => {
       toast.success(res?.data?.message, { position: "top-right" });
       setTimeout(() => navigate("/feed"), 2000);
     } catch (err) {
-      toast.success(err?.message, { position: "top-right" });
+      toast.error(err?.message, { position: "top-right" });
       console.error("Login failed:", err.response || err.message);
     }
   };

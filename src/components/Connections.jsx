@@ -10,6 +10,11 @@ import useConnections from "../hooks/useConnections";
 const buttonsConfig = [
   {
     id: 1,
+    lable: "View",
+    color: "blue",
+  },
+  {
+    id: 2,
     lable: "Remove",
     color: "pink",
   },
@@ -26,9 +31,9 @@ const Connections = () => {
   return (
     <>
       <ToastContainer />
-      <div className="w-[97%] max-h-screen flex flex-col items-start justify-center gap-6 mx-4 my-4 p-4 bg-white rounded-2xl shadow-lg">
+      <div className="w-[97%] max-h-screen flex flex-col items-start justify-center gap-6 mx-4 my-4 p-4 ">
         <Heading headingName="All Connections" />
-        <div className="flex w-full flex-col items-center justify-center gap-4">
+        <div className="flex w-full flex-col items-start justify-center gap-4">
           {connections.length > 0 ? (
             connections.map((connection, index) => {
               return (

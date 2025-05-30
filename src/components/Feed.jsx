@@ -23,12 +23,10 @@ const Feed = () => {
     getUsersFeed();
   }, []);
   return (
-    <div className="flex flex-start gap-7 m-2 px-5 flex-wrap ">
-      {feedUsers
-        ? feedUsers.map((user, index) => {
-            return <FeedCard key={index} user={user} />;
-          })
-        : null}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
+      {feedUsers?.map((user, index) => (
+        <FeedCard key={index} user={user} />
+      ))}
     </div>
   );
 };

@@ -26,7 +26,7 @@ const ChipCard = ({ item, buttons }) => {
           buttons.map((button) => (
             <button
               key={button.id}
-              className={`py-2 px-4 text-sm font-medium rounded-lg border border-transparent
+              className={`py-2 px-4 w-[80px] text-sm font-medium rounded-lg border border-transparent
               bg-${button.color}-600 text-white hover:bg-${button.color}-700
               focus:outline-none focus:ring-2 focus:ring-${button.color}-500 disabled:opacity-50 cursor-pointer`}
             >
