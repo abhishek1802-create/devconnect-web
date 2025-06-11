@@ -2,10 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 const Footer = () => {
-  // const user = useSelector((state) => state.user);
-
-  // if (!user) return null;
-
   return (
     <div className="bg-gray-100">
       <div className="max-w-screen-xl py-5 px-4 sm:px-6 text-gray-800 sm:flex justify-between mx-auto">

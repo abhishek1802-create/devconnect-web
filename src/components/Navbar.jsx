@@ -8,10 +8,6 @@ import NavButtons from "./NavButtons";
 const Navbar = () => {
   const user = useSelector((state) => state.user);
 
-  // if (!user) {
-  //   return null;
-  // }
-
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -45,7 +41,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <Link to="/feed" className="navbar-center">
+      <Link to="/app/feed" className="navbar-center">
         <img className="w-16 h-16" src={appLogo} alt="app-logo" />
       </Link>
       <div className="navbar-end">

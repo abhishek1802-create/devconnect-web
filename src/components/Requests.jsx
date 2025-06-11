@@ -9,14 +9,16 @@ import useRequests from "../hooks/useRequests";
 
 const buttonsConfig = [
   {
-    id: 1,
+    id: "Accept",
     lable: "Accept",
     color: "blue",
+    status: "accepted",
   },
   {
-    id: 2,
+    id: "Reject",
     lable: "Reject",
     color: "pink",
+    status: "rejected",
   },
 ];
 
@@ -43,7 +45,6 @@ const Requests = () => {
           ) : (
             <span>No Requests Available</span>
           )}
-          {!requests && <span>No Connections Available</span>}
         </div>
       </div>
     </>

@@ -1,6 +1,19 @@
 import userImage from "../assets/blank-avatar-photo-place-holder-600nw-1095249842.webp";
+import useAcceptCase from "../hooks/useAcceptCase";
 
 const ChipCard = ({ item, buttons }) => {
+  const { getAcceptData } = useAcceptCase();
+
+  const handleClick = (status, id) => {
+    switch (status) {
+      case "accepted":
+        getAcceptData(status, id);
+        break;
+      case "rejected":
+        break;
+    }
+  };
+
   return (
     <div className="w-[75%] border border-gray-200 rounded-3xl bg-gray-50 p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between shadow-md gap-4">
       {/* Profile Section */}
@@ -26,6 +39,7 @@ const ChipCard = ({ item, buttons }) => {
           buttons.map((button) => (
             <button
               key={button.id}
+              onClick={() => handleClick(button?.status, item?._id)}
               className={`py-2 px-4 w-[80px] text-sm font-medium rounded-lg border border-transparent
               bg-${button.color}-600 text-white hover:bg-${button.color}-700
               focus:outline-none focus:ring-2 focus:ring-${button.color}-500 disabled:opacity-50 cursor-pointer`}

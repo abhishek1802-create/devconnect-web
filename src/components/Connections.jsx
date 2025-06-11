@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Heading from "./Heading";
@@ -9,12 +8,12 @@ import useConnections from "../hooks/useConnections";
 
 const buttonsConfig = [
   {
-    id: 1,
+    id: "View",
     lable: "View",
     color: "blue",
   },
   {
-    id: 2,
+    id: "Remove",
     lable: "Remove",
     color: "pink",
   },
